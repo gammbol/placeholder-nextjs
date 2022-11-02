@@ -1,7 +1,7 @@
 import Link from "next/link";
 import classes from '../styles/menu.module.css';
 
-export default function ({ children }) {
+export default function MainLayout({ children }) {
     return (
         <>
             <nav className={classes.menu}>

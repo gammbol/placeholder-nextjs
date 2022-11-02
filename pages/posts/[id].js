@@ -4,7 +4,7 @@ import MainLayout from "../../components/MainLayout";
 export default function Post ({ data: post }) {
     return (
         <MainLayout>
-            <h1>Post {post.title}</h1>
+            <h1>{post.title}</h1>
             <p>{post.body}</p>
             <button onClick={() => Router.push('/posts')}>GO BACK I WANT TO BE MONKEY</button>
         </MainLayout>
