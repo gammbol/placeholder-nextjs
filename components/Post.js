@@ -9,7 +9,9 @@ export default function Post({ post }) {
                 <Link href={`/posts/${post.id}`} className={"post__link"}>
                     <h2 className={classes.post__title}>{post.title}</h2>
                 </Link>
-                <p className={classes.post__author}>BY USER {post.userId}</p>
+                <Link href={`/users/${post.userId}`} class={"post__link"}>
+                    <p className={classes.post__author}>BY USER {post.userId}</p>
+                </Link>
             </div>
         </>
     )

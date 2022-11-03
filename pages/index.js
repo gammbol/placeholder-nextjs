@@ -5,10 +5,6 @@ import Link from "next/link";
 
 export default function Home ({ posts }) {
     const [head, ...rest] = posts;
-    const ClickHandler = (e) => {
-        e.preventDefault();
-        Router.push('/posts')
-    }
 
     return <MainLayout>
         <div className="mainPost">
@@ -17,7 +13,9 @@ export default function Home ({ posts }) {
                 <h1 className="home__title">{head.title}</h1>
             </Link>
             <p className="home__body">{head.body}</p>
-            <p className="home__author">BY  USER {head.userId}</p>
+            <Link href={`/users/${head.userId}`} className={"post__link"}>
+                <p className="home__author">BY  USER {head.userId}</p>
+            </Link>
         </div>
         <hr/>
         <div className="home__restPosts">
@@ -25,7 +23,7 @@ export default function Home ({ posts }) {
                 <Post key={post.id} post={post}></Post>
             ))}
         </div>
-        <button className="view_more" onClick={ClickHandler}>View more posts</button>
+        <button className="view_more" onClick={() => Router.push('/posts')}>View more posts</button>
     </MainLayout>
 }
 
