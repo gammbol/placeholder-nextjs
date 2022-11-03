@@ -1,11 +1,14 @@
 import classes from '../styles/homePost.module.css'
+import Link from "next/link";
 
-export default function HomePost({ post }) {
+export default function Post({ post }) {
     return (
         <>
             <div className={classes.container}>
                 <p className={classes.post__id}>Post {post.id}</p>
-                <h2 className={classes.post__title}>{post.title}</h2>
+                <Link href={`/posts/${post.id}`}>
+                    <h2 className={classes.post__title}>{post.title}</h2>
+                </Link>
                 <p className={classes.post__author}>BY USER {post.userId}</p>
             </div>
         </>

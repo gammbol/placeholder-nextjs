@@ -1,18 +1,16 @@
 import MainLayout from "../../components/MainLayout";
-import Link from "next/link";
 import classes from '../../styles/list.module.css';
+import Post from "../../components/Post";
 
 export default function Posts ({ posts: data }) {
     return (
         <MainLayout>
-            <h1>Posts Page</h1>
-            <ul className={classes.list}>
+            <h1 className={classes.posts__title}>Posts Page</h1>
+            <div className={classes.posts__list}>
                 {data.map(post => (
-                    <li key={post.id}>
-                        <Link href={`/posts/${post.id}`}>{post.title}</Link>
-                    </li>
+                    <Post key={post.id} post={post}></Post>
                 ))}
-            </ul>
+            </div>
         </MainLayout>
     )
 }

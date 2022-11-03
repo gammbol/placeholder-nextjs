@@ -2,3 +2,13 @@
     text-align: left;
     margin-top: 60px;
 }
+.posts__title {
+    text-align: center;
+    margin-top: 30px;
+}
+.posts__list {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

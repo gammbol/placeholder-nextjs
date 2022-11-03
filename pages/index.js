@@ -1,8 +1,13 @@
 import MainLayout from "../components/MainLayout";
-import HomePost from "../components/HomePost";
+import Post from "../components/Post";
+import Router from "next/router";
 
 export default function Home ({ posts }) {
     const [head, ...rest] = posts;
+    const ClickHandler = (e) => {
+        e.preventDefault();
+        Router.push('/posts')
+    }
 
     return <MainLayout>
         <div className="home__mainPost">
@@ -14,9 +19,10 @@ export default function Home ({ posts }) {
         <hr/>
         <div className="home__restPosts">
             {rest.filter(item => item.id <= 7).map(post => (
-                <HomePost key={post.id} post={post}></HomePost>
+                <Post key={post.id} post={post}></Post>
             ))}
         </div>
+        <button className="view_more" onClick={ClickHandler}>View more posts</button>
     </MainLayout>
 }
 
