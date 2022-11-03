@@ -16,7 +16,7 @@ export default function Posts ({ posts: data }) {
 }
 
 Posts.getInitialProps = async () => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=12?')
     const posts = await response.json()
     return { posts }
 }
