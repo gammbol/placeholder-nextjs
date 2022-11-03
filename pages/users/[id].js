@@ -6,7 +6,7 @@ import Router from "next/router";
 export default function User({ data, userId }) {
     return (
         <MainLayout>
-            <div>
+            <div className={"mainPost"}>
                 <h1 className={classes.posts__title}>User {userId}</h1>
                 <p className={"home__body"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
