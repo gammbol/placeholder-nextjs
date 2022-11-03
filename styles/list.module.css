@@ -5,6 +5,8 @@
 .posts__title {
     text-align: center;
     margin-top: 30px;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 36px;
 }
 .posts__list {
     margin-top: 50px;

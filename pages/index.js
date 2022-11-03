@@ -1,6 +1,7 @@
 import MainLayout from "../components/MainLayout";
 import Post from "../components/Post";
 import Router from "next/router";
+import Link from "next/link";
 
 export default function Home ({ posts }) {
     const [head, ...rest] = posts;
@@ -10,9 +11,11 @@ export default function Home ({ posts }) {
     }
 
     return <MainLayout>
-        <div className="home__mainPost">
+        <div className="mainPost">
             <p className="home__id">Post {head.id}</p>
-            <h1 className="home__title">{head.title}</h1>
+            <Link href={`/posts/${head.id}`} className={"post__link"}>
+                <h1 className="home__title">{head.title}</h1>
+            </Link>
             <p className="home__body">{head.body}</p>
             <p className="home__author">BY  USER {head.userId}</p>
         </div>

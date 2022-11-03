@@ -1,4 +1,4 @@
-import classes from '../styles/homePost.module.css'
+import classes from '../styles/post.module.css'
 import Link from "next/link";
 
 export default function Post({ post }) {
@@ -6,7 +6,7 @@ export default function Post({ post }) {
         <>
             <div className={classes.container}>
                 <p className={classes.post__id}>Post {post.id}</p>
-                <Link href={`/posts/${post.id}`}>
+                <Link href={`/posts/${post.id}`} className={"post__link"}>
                     <h2 className={classes.post__title}>{post.title}</h2>
                 </Link>
                 <p className={classes.post__author}>BY USER {post.userId}</p>

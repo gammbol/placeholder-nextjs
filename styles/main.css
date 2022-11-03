@@ -8,7 +8,7 @@ h1,h2 {
     margin: 0;
 }
 
-.home__mainPost {
+.mainPost {
     margin: 60px auto 40px;
     width: 60%
 }
@@ -48,8 +48,16 @@ h1,h2 {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 11px;
     width: 205px;
-    height: 54px;
+    height: 60px;
     background-color: white;
     border: 2px solid black;
     cursor: pointer;
+    font-weight: 700;
+}
+.center {
+    text-align: center;
+}
+.post__link {
+    text-decoration: none;
+    color: black;
 }
