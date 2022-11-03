@@ -1,0 +1,25 @@
+.container {
+    border-right: 2px solid #E6E6E6;
+    border-bottom: 2px solid #E6E6E6;
+    position: relative;
+    height: 160px;
+    flex-basis: 290px;
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+.post__id {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 10px;
+    color: #999999;
+    margin-top: 25px;
+}
+.post__title {
+    margin-top: 5px;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 20px;
+}
+.post__author {
+    margin-top: 20px;
+    position: absolute;
+    bottom: 15px;
+}

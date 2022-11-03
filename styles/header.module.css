@@ -1,0 +1,33 @@
+.header {
+    border-bottom: 1px solid #E6E6E6;
+    height: 90px;
+}
+.header__container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    background-image: url("../images/logo.svg");
+    width: 135px;
+    height: 17px;
+}
+.header__nav {
+    display: flex;
+    gap: 40px;
+    margin-right: 20px;
+}
+.header__link {
+    font-family: 'Libre Franklin', sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}

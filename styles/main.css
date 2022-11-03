@@ -1,3 +1,43 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+h1,h2 {
+    margin: 0;
+}
+
+.home__mainPost {
+    margin: 60px auto 40px;
+    width: 60%
+}
+.home__id {
+    color: #999999;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 10px;
+    margin: 0;
+}
+.home__title {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 36px;
+    margin-top: 5px;
+}
+.home__body {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 16px;
+    color: #666666;
+    margin-top: 27px;
+}
+.home__author {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: 28px;
+}
+.home__restPosts {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
