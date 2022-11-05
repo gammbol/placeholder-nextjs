@@ -15,8 +15,8 @@ export default function Home ({ posts, photos }) {
                 <Image
                     src={headPhoto.url}
                     alt={headPost.title}
-                    width={500}
-                    height={500}
+                    width={600}
+                    height={600}
                 />
             </div>
             <p className="home__id">Post {headPost.id}</p>
@@ -41,7 +41,7 @@ export default function Home ({ posts, photos }) {
 Home.getInitialProps = async () => {
     const resPosts = await fetch('https://jsonplaceholder.typicode.com/posts')
     const posts = await resPosts.json();
-    const resPhotos = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit${posts.length}`)
+    const resPhotos = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${posts.length}`)
     const photos = await resPhotos.json();
     return { posts, photos }
 }
