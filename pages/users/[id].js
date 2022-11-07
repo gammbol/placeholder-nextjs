@@ -3,7 +3,7 @@ import classes from '../../styles/list.module.css';
 import Post from "../../components/Post";
 import Router from "next/router";
 
-export default function User({ data, userId }) {
+export default function User({ data, userId, photos }) {
     return (
         <MainLayout>
             <div className={"mainPost"}>
@@ -13,7 +13,7 @@ export default function User({ data, userId }) {
             </div>
             <div className={classes.posts__list}>
                 {data.map(post => (
-                    <Post key={post.id} post={post}></Post>
+                    <Post key={post.id} post={post} image={photos[post.id - 1]}></Post>
                 ))}
             </div>
             <button className="view_more" onClick={() => Router.push('/')}>Go Home</button>
@@ -24,5 +24,7 @@ export default function User({ data, userId }) {
 User.getInitialProps = async ({ query }) => {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${query.id}`)
     const data = await res.json()
-    return { data, userId: query.id }
+    const resPhotos = await fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${data.length}`)
+    const photos = await resPhotos.json();
+    return { data, userId: query.id, photos }
 }

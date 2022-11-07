@@ -1,6 +1,7 @@
 import Link from "next/link";
 import classes from '../styles/header.module.css';
 import Router from "next/router";
+import Footer from "./Footer";
 
 export default function MainLayout({ children }) {
     return (
@@ -17,6 +18,7 @@ export default function MainLayout({ children }) {
             <main className={classes.main}>
                 {children}
             </main>
+            <Footer></Footer>
         </>
     )
 }

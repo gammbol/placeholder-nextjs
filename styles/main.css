@@ -10,7 +10,19 @@ h1,h2 {
 
 .mainPost {
     margin: 60px auto 40px;
-    width: 60%
+    width: 80%;
+}
+.mainPost__flex {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.mainPost__photo {
+    flex-basis: 400px;
+}
+.mainPost__img {
+    width: 100%;
+    height: 100%;
 }
 .home__id {
     color: #999999;
@@ -58,9 +70,26 @@ h1,h2 {
 .center {
     text-align: center;
 }
+.margin-auto {
+    margin: 20px auto;
+}
 .post__link {
     text-decoration: none;
     color: black;
+}
+.posts__photo {
+    width: 300px;
+    margin: 40px auto;
+}
+.posts__img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .mainPost__flex {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 430px) {
