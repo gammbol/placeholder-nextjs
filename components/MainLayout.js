@@ -15,9 +15,11 @@ export default function MainLayout({ children }) {
                     </nav>
                 </div>
             </header>
-            <main className={classes.main}>
-                {children}
-            </main>
+            <div className={classes.wrapper}>
+                <main className={classes.main}>
+                    {children}
+                </main>
+            </div>
             <Footer></Footer>
         </>
     )

@@ -85,6 +85,9 @@ h1,h2 {
     width: 100%;
     height: 100%;
 }
+.posts__main {
+    min-height: calc(100vh - 91px - 100px - 137px);
+}
 
 @media (max-width: 1200px) {
     .mainPost__flex {
@@ -95,5 +98,8 @@ h1,h2 {
 @media (max-width: 430px) {
     .mainPost {
         width: 80%;
+    }
+    .posts__photo {
+        width: 150px;
     }
 }

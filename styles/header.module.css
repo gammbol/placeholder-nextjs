@@ -28,8 +28,10 @@
     font-size: 14px;
     color: black;
 }
-
 .main {
     max-width: 1200px;
     margin: 0 auto;
+}
+.footer {
+    margin-top: 50px;
 }

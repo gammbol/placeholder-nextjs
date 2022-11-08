@@ -27,9 +27,6 @@
 }
 
 @media (max-width: 430px) {
-    .container {
-        justify-content: center;
-    }
     .footer__logo {
         margin-bottom: 10px;
     }

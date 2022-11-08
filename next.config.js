@@ -1,11 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+
+module.exports = {
   images: {
-    domains: ['localhost', 'via.placeholder.com'],
-    formats: ['image/webp'],
-    allowFutureImage: true
+    domains: ['localhost', 'via.placeholder.com']
   }
 }
-
-module.exports = nextConfig

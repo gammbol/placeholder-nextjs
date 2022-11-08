@@ -4,7 +4,7 @@ import MainLayout from "../../components/MainLayout";
 export default function Post ({ data: post, photo }) {
     return (
         <MainLayout>
-            <div className="mainPost">
+            <div className="mainPost posts__main">
                 <h1 className="home__title center">{post.title}</h1>
                 <div className="posts__photo">
                     <img className="posts__img" src={photo.url} alt=""/>
